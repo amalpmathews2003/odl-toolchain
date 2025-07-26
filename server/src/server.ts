@@ -11,6 +11,8 @@ import {
 } from "vscode-languageserver/node";
 
 import { TextDocument } from "vscode-languageserver-textdocument";
+import { provideCompletionItems, resolveCompletionItem } from "./methods/completion";
+import { provideHover } from "./methods/hover";
 
 // Create a connection for the server, using Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -23,9 +25,11 @@ connection.onInitialize((params: InitializeParams) => {
   const result: InitializeResult = {
     capabilities: {
       textDocumentSync: TextDocumentSyncKind.Incremental,
-      completionProvider:{
+      completionProvider: {
         resolveProvider: true,
-      }
+        // triggerCharacters: ["%"],
+      },
+      hoverProvider: true,
     },
   };
 
@@ -33,54 +37,25 @@ connection.onInitialize((params: InitializeParams) => {
 });
 
 documents.onDidChangeContent((change) => {
-  connection.window.showInformationMessage(
-    "onDidChangeContent: " + change.document.uri
-  );
+  // connection.window.showInformationMessage(
+  //   "onDidChangeContent: " + change.document.uri
+  // );
 });
 
 
 
 connection.onCompletion(
-  (_textDocumentPosition: TextDocumentPositionParams): CompletionItem[] => {
-    // The pass parameter contains the position of the text document in
-    // which code complete got requested. For the example we ignore this
-    // info and always provide the same completion items.
-    return [
-      {
-        label: 'object',
-        kind: CompletionItemKind.Keyword,
-        data: 1
-      },
-      {
-        label: 'property',
-        kind: CompletionItemKind.Keyword,
-        data: 2
-      },
-      {
-        label: 'method',
-        kind: CompletionItemKind.Keyword,
-        data: 3
-      }
-    ];
-  }
+  (params) => provideCompletionItems(params, documents)
 );
-
+// This handler provides the initial list of completion items.
 // This handler resolves additional information for the item selected in
 // the completion list.
 connection.onCompletionResolve(
-  (item: CompletionItem): CompletionItem => {
-    if (item.data === 1) {
-      item.detail = 'ODL object keyword';
-      item.documentation = 'Defines an ODL object';
-    } else if (item.data === 2) {
-      item.detail = 'ODL property keyword';
-      item.documentation = 'Defines an ODL property';
-    } else if (item.data === 3) {
-      item.detail = 'ODL method keyword';
-      item.documentation = 'Defines an ODL method';
-    }
-    return item;
-  }
+  (item: CompletionItem) => resolveCompletionItem(item)
+);
+
+connection.onHover(
+  (params) => provideHover(params, documents)
 );
 
 // Make the text document manager listen on the connection

@@ -1,0 +1,518 @@
+[
+  {
+    "label": "%config",
+    "kind": 14,
+    "detail": "Section Keyword",
+    "documentation": "Defines a configuration section for setting options in an ODL file."
+  },
+  {
+    "label": "%define",
+    "kind": 14,
+    "detail": "Section Keyword",
+    "documentation": "Defines a section for specifying data model objects, parameters, functions, and entry points."
+  },
+  {
+    "label": "%populate",
+    "kind": 14,
+    "detail": "Section Keyword",
+    "documentation": "Defines a section for populating data model instances and setting parameter values."
+  },
+  {
+    "label": "action",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Used to specify action callback handlers for objects or parameters."
+  },
+  {
+    "label": "add",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Used in the %populate section to add instances to multi-instance objects."
+  },
+  {
+    "label": "as",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Specifies an alias for imports or names synchronization templates."
+  },
+  {
+    "label": "call",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Invokes a function for actions or event handlers."
+  },
+  {
+    "label": "counted",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Used with 'with' to define an instance count parameter for multi-instance objects."
+  },
+  {
+    "label": "default",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Sets a default value for a parameter in its definition."
+  },
+  {
+    "label": "entry-point",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Defines an entry point function for initialization or cleanup."
+  },
+  {
+    "label": "event",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Used with 'on' to define event callback handlers."
+  },
+  {
+    "label": "extend",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Extends an object definition using a MIB."
+  },
+  {
+    "label": "false",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Boolean value used in parameter values or configurations."
+  },
+  {
+    "label": "filter",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Specifies a boolean expression to filter events in event handlers."
+  },
+  {
+    "label": "include",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Includes another ODL file or directory for mandatory parsing."
+  },
+  {
+    "label": "#include",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Includes another ODL file or directory optionally."
+  },
+  {
+    "label": "?include",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Conditionally includes one of two ODL files or directories."
+  },
+  {
+    "label": "&include",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Includes an ODL file or directory for deferred (post) parsing."
+  },
+  {
+    "label": "import",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Loads a shared object for function resolution."
+  },
+  {
+    "label": "instance",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Used in %populate to specify an instance of a multi-instance object."
+  },
+  {
+    "label": "mib",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Defines a Modular Information Block for extending objects."
+  },
+  {
+    "label": "object",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Defines an ODL object in the data model."
+  },
+  {
+    "label": "on",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Used to specify event or action handlers."
+  },
+  {
+    "label": "parameter",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Defines a parameter within an object."
+  },
+  {
+    "label": "regexp",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Specifies a regular expression for matching event names."
+  },
+  {
+    "label": "select",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Selects an existing object to extend its definition."
+  },
+  {
+    "label": "using",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Used with 'extend' to apply a MIB to an object."
+  },
+  {
+    "label": "true",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Boolean value used in parameter values or configurations."
+  },
+  {
+    "label": "with",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Used with 'counted' to define instance count parameters."
+  },
+  {
+    "label": "synchronize",
+    "kind": 14,
+    "detail": "Language Keyword",
+    "documentation": "Defines a synchronization context for data model objects or parameters."
+  },
+  {
+    "label": "RTLD_GLOBAL",
+    "kind": 14,
+    "detail": "Import Attribute",
+    "documentation": "Makes symbols in a shared object available for subsequent loads."
+  },
+  {
+    "label": "RTLD_NODELETE",
+    "kind": 14,
+    "detail": "Import Attribute",
+    "documentation": "Prevents unloading of a shared object after parsing."
+  },
+  {
+    "label": "RTLD_NOW",
+    "kind": 14,
+    "detail": "Import Attribute",
+    "documentation": "Resolves all symbols in a shared object before dlopen returns."
+  },
+  {
+    "label": "%batch",
+    "kind": 14,
+    "detail": "Synchronize Attribute",
+    "documentation": "Optimizes synchronization of multiple parameters in a batch."
+  },
+  {
+    "label": "%global",
+    "kind": 14,
+    "detail": "Config Attribute",
+    "documentation": "Applies a configuration option globally across all scopes."
+  },
+  {
+    "label": "%in",
+    "kind": 14,
+    "detail": "Function Argument Attribute",
+    "documentation": "Marks a function argument as input from caller to callee."
+  },
+  {
+    "label": "%instance",
+    "kind": 14,
+    "detail": "Object/Parameter/Function Attribute",
+    "documentation": "Makes a parameter or function usable on instance objects."
+  },
+  {
+    "label": "%key",
+    "kind": 14,
+    "detail": "Parameter Attribute",
+    "documentation": "Marks a parameter as a key for identifying instances."
+  },
+  {
+    "label": "%mandatory",
+    "kind": 14,
+    "detail": "Function Argument Attribute",
+    "documentation": "Marks a function argument as required."
+  },
+  {
+    "label": "%out",
+    "kind": 14,
+    "detail": "Function Argument Attribute",
+    "documentation": "Marks a function argument as output from callee to caller."
+  },
+  {
+    "label": "%persistent",
+    "kind": 14,
+    "detail": "Object/Parameter Attribute",
+    "documentation": "Marks an object or parameter for persistent storage."
+  },
+  {
+    "label": "!persistent",
+    "kind": 14,
+    "detail": "Object/Parameter Attribute",
+    "documentation": "Unsets the persistent attribute for an object or parameter."
+  },
+  {
+    "label": "%private",
+    "kind": 14,
+    "detail": "Object/Parameter/Function Attribute",
+    "documentation": "Makes an object, parameter, or function invisible to external sources."
+  },
+  {
+    "label": "!private",
+    "kind": 14,
+    "detail": "Object/Parameter Attribute",
+    "documentation": "Unsets the private attribute for an object or parameter."
+  },
+  {
+    "label": "%protected",
+    "kind": 14,
+    "detail": "Object/Parameter/Function Attribute",
+    "documentation": "Marks an object, parameter, or function for internal use only."
+  },
+  {
+    "label": "!protected",
+    "kind": 14,
+    "detail": "Object/Parameter Attribute",
+    "documentation": "Unsets the protected attribute for an object or parameter."
+  },
+  {
+    "label": "%read-only",
+    "kind": 14,
+    "detail": "Object/Parameter Attribute",
+    "documentation": "Prevents external sources from modifying an object or parameter."
+  },
+  {
+    "label": "!read-only",
+    "kind": 14,
+    "detail": "Object/Parameter Attribute",
+    "documentation": "Unsets the read-only attribute for an object or parameter."
+  },
+  {
+    "label": "%strict",
+    "kind": 14,
+    "detail": "Function Argument Attribute",
+    "documentation": "Requires a function argument to match the defined type."
+  },
+  {
+    "label": "%template",
+    "kind": 14,
+    "detail": "Object/Parameter/Function Attribute",
+    "documentation": "Makes a parameter or function usable on template objects."
+  },
+  {
+    "label": "%unique",
+    "kind": 14,
+    "detail": "Parameter Attribute",
+    "documentation": "Ensures a parameter value is unique among instances."
+  },
+  {
+    "label": "%volatile",
+    "kind": 14,
+    "detail": "Parameter Attribute",
+    "documentation": "Marks a parameter as frequently changing, suppressing change events."
+  },
+  {
+    "label": "!volatile",
+    "kind": 14,
+    "detail": "Parameter Attribute",
+    "documentation": "Unsets the volatile attribute for a parameter."
+  },
+  {
+    "label": "%async",
+    "kind": 14,
+    "detail": "Function Attribute",
+    "documentation": "Marks a function as asynchronous, suitable for lengthy operations."
+  },
+  {
+    "label": "%write-once",
+    "kind": 14,
+    "detail": "Parameter Attribute",
+    "documentation": "Allows a parameter to be set only once."
+  },
+  {
+    "label": "bool",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "Boolean type for parameters or function arguments (true/false)."
+  },
+  {
+    "label": "csv_string",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "Comma-separated string type for parameters or function arguments."
+  },
+  {
+    "label": "double",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "Double-precision floating-point type for function arguments."
+  },
+  {
+    "label": "datetime",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "String type for RFC-3339 formatted date-time values."
+  },
+  {
+    "label": "fd",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "File descriptor type for function arguments."
+  },
+  {
+    "label": "htable",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "Hash table type for function arguments."
+  },
+  {
+    "label": "int8",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "8-bit signed integer type for parameters or function arguments."
+  },
+  {
+    "label": "int16",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "16-bit signed integer type for parameters or function arguments."
+  },
+  {
+    "label": "int32",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "32-bit signed integer type for parameters or function arguments."
+  },
+  {
+    "label": "int64",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "64-bit signed integer type for parameters or function arguments."
+  },
+  {
+    "label": "list",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "List type for function arguments."
+  },
+  {
+    "label": "ssv_string",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "Space-separated string type for parameters or function arguments."
+  },
+  {
+    "label": "string",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "String type for parameters or function arguments."
+  },
+  {
+    "label": "uint8",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "8-bit unsigned integer type for parameters or function arguments."
+  },
+  {
+    "label": "uint16",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "16-bit unsigned integer type for parameters or function arguments."
+  },
+  {
+    "label": "uint32",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "32-bit unsigned integer type for parameters or function arguments."
+  },
+  {
+    "label": "uint64",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "64-bit unsigned integer type for parameters or function arguments."
+  },
+  {
+    "label": "variant",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "Variant type for function arguments, allowing multiple types."
+  },
+  {
+    "label": "void",
+    "kind": 14,
+    "detail": "Type Keyword",
+    "documentation": "Void type for function return values or arguments."
+  },
+  {
+    "label": "add-inst",
+    "kind": 14,
+    "detail": "Action Name",
+    "documentation": "Action for adding an instance to a multi-instance object."
+  },
+  {
+    "label": "del-inst",
+    "kind": 14,
+    "detail": "Action Name",
+    "documentation": "Action for deleting an instance from a multi-instance object."
+  },
+  {
+    "label": "describe",
+    "kind": 14,
+    "detail": "Action Name",
+    "documentation": "Action for describing an object or parameter."
+  },
+  {
+    "label": "list",
+    "kind": 14,
+    "detail": "Action Name",
+    "documentation": "Action for listing object contents."
+  },
+  {
+    "label": "read",
+    "kind": 14,
+    "detail": "Action Name",
+    "documentation": "Action for reading an object or parameter value."
+  },
+  {
+    "label": "validate",
+    "kind": 14,
+    "detail": "Action Name",
+    "documentation": "Action for validating an object or parameter."
+  },
+  {
+    "label": "write",
+    "kind": 14,
+    "detail": "Action Name",
+    "documentation": "Action for writing to an object or parameter."
+  },
+  {
+    "label": "translate",
+    "kind": 14,
+    "detail": "Action Name",
+    "documentation": "Action for translating values in synchronization blocks."
+  },
+  {
+    "label": "apply",
+    "kind": 14,
+    "detail": "Action Name",
+    "documentation": "Action for applying values in synchronization blocks."
+  },
+  {
+    "label": "<->",
+    "kind": 14,
+    "detail": "Synchronize Direction",
+    "documentation": "Bi-directional synchronization operator."
+  },
+  {
+    "label": "->",
+    "kind": 14,
+    "detail": "Synchronize Direction",
+    "documentation": "Right-directional synchronization operator."
+  },
+  {
+    "label": "<-",
+    "kind": 14,
+    "detail": "Synchronize Direction",
+    "documentation": "Left-directional synchronization operator."
+  }
+]
