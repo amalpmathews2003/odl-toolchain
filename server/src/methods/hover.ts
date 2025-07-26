@@ -14,7 +14,6 @@ export function provideHover(
     }
 
     const pos = params.position;
-
     const { text: word, range } = wordUnderCursor(doc, pos);
 
     const kw = odlKeywords.find(k => k.label === word);
@@ -27,7 +26,7 @@ export function provideHover(
     };
 }
 
-function wordUnderCursor(
+export function wordUnderCursor(
     document: TextDocument,
     position: Position,
 ) {

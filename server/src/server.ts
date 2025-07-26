@@ -13,6 +13,7 @@ import {
 import { TextDocument } from "vscode-languageserver-textdocument";
 import { provideCompletionItems, resolveCompletionItem } from "./methods/completion";
 import { provideHover } from "./methods/hover";
+import { provideDefinition } from "./methods/definition";
 
 // Create a connection for the server, using Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -30,6 +31,7 @@ connection.onInitialize((params: InitializeParams) => {
         // triggerCharacters: ["%"],
       },
       hoverProvider: true,
+      definitionProvider:true,
     },
   };
 
@@ -57,6 +59,11 @@ connection.onCompletionResolve(
 connection.onHover(
   (params) => provideHover(params, documents)
 );
+
+connection.onDefinition(
+  (params) => provideDefinition(params, documents)
+);
+
 
 // Make the text document manager listen on the connection
 // for open, change and close text document events
