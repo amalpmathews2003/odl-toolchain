@@ -1,0 +1,67 @@
+{
+  "scopeName": "source.odl",
+  "patterns": [
+    {
+      "name": "keyword.section.odl",
+      "match": "%(define|config|populate)\\b"
+    },
+    {
+      "name": "keyword.action.odl",
+      "match": "\\b(action|add|remove)\\b"
+    },
+    {
+      "name": "storage.type.odl",
+      "match": "\\b(int|bool|string|datetime|float|double)\\b"
+    },
+    {
+      "name": "keyword.control.odl",
+      "match": "%\\w+"
+    },
+    {
+      "name": "keyword.operator.odl",
+      "match": "[=<>!]+"
+    },
+    {
+      "name": "punctuation.separator.odl",
+      "match": "[,;:]"
+    },
+    {
+      "name": "punctuation.bracket.round.odl",
+      "match": "[()]"
+    },
+    {
+      "name": "punctuation.bracket.square.odl",
+      "match": "[\\[\\]]"
+    },
+    {
+      "name": "punctuation.bracket.curly.odl",
+      "match": "[{}]"
+    },
+    {
+      "name": "comment.block.odl",
+      "begin": "/\\*",
+      "end": "\\*/"
+    },
+    {
+      "name": "comment.line.double-slash.odl",
+      "match": "//.*$"
+    },
+    {
+      "name": "string.quoted.double.odl",
+      "match": "\"([^\"\\\\]|\\\\.)*\""
+    },
+    {
+      "name": "constant.numeric.odl",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    },
+    {
+      "name": "variable.other.odl",
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+    }
+  ],
+  "repository": {},
+  "fileTypes": [
+    "odl"
+  ],
+  "name": "ODL"
+}

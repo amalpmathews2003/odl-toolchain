@@ -20,7 +20,14 @@
         "id": "odl",
         "extensions": [".odl"],
         "aliases": ["ODL", "ODL Language"],
-        "configuration": "./client/language-configuration.json"
+        "configuration": "./assets/language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "odl",
+        "scopeName": "source.odl",
+        "path": "./syntaxes/odl.tmLanguage.json"
       }
     ]
   },
