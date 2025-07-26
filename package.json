@@ -5,6 +5,10 @@
   "license": "MIT",
   "version": "1.0.0",
   "publisher": "amalpmathews",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amalpmathews2003/odl-toolchain"
+  },
   "categories": [],
   "engines": {
     "vscode": "^1.75.0"
@@ -20,7 +24,11 @@
         "id": "odl",
         "extensions": [".odl"],
         "aliases": ["ODL", "ODL Language"],
-        "configuration": "./assets/language-configuration.json"
+        "configuration": "./assets/language-configuration.json",
+        "icon": {
+          "light": "./assets/icons/odl-icon-dark.svg",
+          "dark": "./assets/icons/odl-icon-dark.svg"
+        }
       }
     ],
     "grammars": [

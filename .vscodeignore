@@ -1,0 +1,41 @@
+odl.md
+release.yml
+.vscode/*
+.idea/*
+.github/*
+# Node and build artifacts
+node_modules/
+client/node_modules/
+server/node_modules/
+client/dist/
+server/dist/
+*.tsbuildinfo
+*.log
+*.vsix
+
+# OS and editor files
+*.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Test and coverage
+coverage/
+*.test.js
+*.spec.js
+*.test.ts
+*.spec.ts
+
+# Misc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+**/*.ts
+**/tsconfig.json
+!file.ts
+
+*.vsix

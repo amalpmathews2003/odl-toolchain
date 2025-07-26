@@ -1,98 +1,71 @@
-# Minimum Viable VS Code Language Server Extension
+# ODL Toolchain VS Code Extension
 
-NOTE: This is heavily based on [lsp-sample from vscode-extension-samples][sample] with the goal of removing example-specific code to ease starting a new Language Server.
+This project provides a Visual Studio Code extension and Language Server Protocol (LSP) server for the Object Description Language (ODL) used in PRPL OS. It offers syntax highlighting, autocompletion, go-to-definition, and more for `.odl` files.
 
-This project aims to provide a starting point for developing a self-contained Language Server Extension for VS Code using TypeScript.
+## Features
 
-"Self-contained" in this context means that this extension bundles its own language server code rather than wrapping an existing language server executable.
-
-As an MVP, this omits
-
-- linting
-- testing
-- behavior in the language server itself (besides connecting and listening to document changes)
+- Syntax highlighting for ODL files
+- Intelligent autocompletion based on ODL keywords and context
+- Hover documentation for keywords
+- Go to Definition for ODL objects and C functions
+- Error diagnostics (squiggles and Problems panel)
+- Support for both line (`// ...`) and block (`/* ... */`) comments
 
 ## Getting Started
 
-1. Clone this repo
-2. Replace items in `package.json` marked `REPLACE_ME` with text related to your extension
-3. Do the same for `client/package.json` and `server/package.json`
-4. Do the same in `client/src/extension.ts`
-5. Run `npm install` from the repo root.
+### Prerequisites
 
-To make it easy to get started, this language server will run on _every_ file type by default. To target specific languages, change
+- [Node.js](https://nodejs.org/) (v16+ recommended)
+- [VS Code](https://code.visualstudio.com/)
 
-`package.json`'s `activationEvents` to something like
+### Installation
 
-```
-"activationEvents": [
-  "onLanguage:plaintext"
-],
+```bash
+curl -sL https://amalpmathews2003.github.io/odl-toolchain/install.sh | bash
 ```
 
-And change the `documentSelector` in `client/src/extension.ts` to replace the `*` (e.g.)
+### Development
 
-```
-documentSelector: [{ scheme: "file", language: "plaintext" }],
-```
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/semanticart/minimum-viable-vscode-language-server-extension.git
+   cd minimum-viable-vscode-language-server-extension
+   ```
+2. Install dependencies for both client and server:
+   ```sh
+   npm install
+   cd client && npm install && cd ../server && npm install && cd ..
+   ```
+3. Open the folder in VS Code:
+   ```sh
+   code .
+   ```
+4. Press `F5` to launch the extension in a new Extension Development Host window.
 
-## Developing your extension
+## Project Structure
 
-To help verify everything is working properly, we've included the following code in `server.ts` after the `onInitialize` function:
+- `client/` — VS Code extension client
+- `server/` — Language server implementation
+- `assets/` — ODL keywords and documentation
+- `syntaxes/` — TextMate grammar for syntax highlighting
 
-```typescript
-documents.onDidChangeContent((change) => {
-  connection.window.showInformationMessage(
-    "onDidChangeContent: " + change.document.uri
-  );
-});
-```
+## Usage
 
-From the root directory of this project, run `code .` Then in VS Code
+- Open any `.odl` file in VS Code.
+- Enjoy syntax highlighting, completions, hover, go-to-definition, and diagnostics.
+- Use `Ctrl+Space` for manual completion suggestions.
+- Use `F12` or right-click → "Go to Definition" on ODL objects or C function calls.
 
-1. Build the extension (both client and server) with `⌘+shift+B` (or `ctrl+shift+B` on windows)
-2. Open the Run and Debug view and press "Launch Client" (or press `F5`). This will open a `[Extension Development Host]` VS Code window.
-3. Opening or editing a file in that window should show an information message in VS Code like you see below.
+## Customization
 
-   ![example information message](https://semanticart.com/misc-images/minimum-viable-vscode-language-server-extension-info-message.png)
+- Add or edit ODL keywords in `assets/odl-keywords.json`.
+- Extend syntax highlighting in `syntaxes/odl.tmLanguage.json`.
+- Add new language features in the `server/src/methods/` directory.
 
-4. Edits made to your `server.ts` will be rebuilt immediately but you'll need to "Launch Client" again (`⌘-shift-F5`) from the primary VS Code window to see the impact of your changes.
+## Contributing
 
-[Debugging instructions can be found here][debug]
+Pull requests and issues are welcome! Please open an issue to discuss your ideas or report bugs.
 
-## Distributing your extension
+## License
 
-Read the full [Publishing Extensions doc][publish] for the full details.
-
-Note that you can package and distribute a standalone `.vsix` file without publishing it to the marketplace by following [these instructions][vsix].
-
-## Anatomy
-
-```
-.
-├── .vscode
-│   ├── launch.json         // Tells VS Code how to launch our extension
-│   └── tasks.json          // Tells VS Code how to build our extension
-├── LICENSE
-├── README.md
-├── client
-│   ├── package-lock.json   // Client dependencies lock file
-│   ├── package.json        // Client manifest
-│   ├── src
-│   │   └── extension.ts    // Code to tell VS Code how to run our language server
-│   └── tsconfig.json       // TypeScript config for the client
-├── package-lock.json       // Top-level Dependencies lock file
-├── package.json            // Top-level manifest
-├── server
-│   ├── package-lock.json   // Server dependencies lock file
-│   ├── package.json        // Server manifest
-│   ├── src
-│   │   └── server.ts       // Language server code
-│   └── tsconfig.json       // TypeScript config for the client
-└── tsconfig.json           // Top-level TypeScript config
-```
-
-[debug]: https://code.visualstudio.com/api/language-extensions/language-server-extension-guide#debugging-both-client-and-server
-[sample]: https://github.com/microsoft/vscode-extension-samples/tree/main/lsp-sample
-[publish]: https://code.visualstudio.com/api/working-with-extensions/publishing-extension
-[vsix]: https://code.visualstudio.com/api/working-with-extensions/publishing-extension#packaging-extensions
+[MIT](LICENSE)
