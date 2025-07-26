@@ -1,13 +1,13 @@
 {
-  "name": "REPLACE_ME",
-  "description": "REPLACE_ME",
-  "author": "REPLACE_ME",
+  "name": "odl-toolchain",
+  "description": "odl-toolchain",
+  "author": "amalpmathews",
   "license": "MIT",
   "version": "0.0.1",
-  "publisher": "REPLACE_ME",
+  "publisher": "amalpmathews",
   "repository": {
     "type": "git",
-    "url": "REPLACE_ME"
+    "url": "https://github.com/amalpmathews2003/odl-toolchain"
   },
   "engines": {
     "vscode": "^1.75.0"

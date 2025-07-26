@@ -1,15 +1,15 @@
 {
-  "name": "REPLACE_ME",
-  "description": "REPLACE_ME",
+  "name": "odl-toolchain-server",
+  "description": "odl-toolchain server",
   "version": "1.0.0",
-  "author": "REPLACE_ME",
+  "author": "amalpmathews",
   "license": "MIT",
   "engines": {
     "node": "*"
   },
   "repository": {
     "type": "git",
-    "url": "REPLACE_ME"
+    "url": "https://github.com/amalpmathews2003/odl-toolchain"
   },
   "dependencies": {
     "vscode-languageserver": "^8.1.0",

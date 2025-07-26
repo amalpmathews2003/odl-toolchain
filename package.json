@@ -1,20 +1,28 @@
 {
-  "name": "REPLACE_ME",
-  "description": "REPLACE_ME",
-  "author": "REPLACE_ME",
+  "name": "odl-toolchain",
+  "description": "odl-toolchain",
+  "author": "amalpmathews",
   "license": "MIT",
   "version": "1.0.0",
-  "publisher": "REPLACE_ME",
+  "publisher": "amalpmathews",
   "categories": [],
   "engines": {
     "vscode": "^1.75.0"
   },
   "activationEvents": [
-    "onLanguage"
+    "onLanguage:odl"
   ],
   "main": "./client/out/extension",
   "contributes": {
-    "configuration": {}
+    "configuration": {},
+    "languages": [
+      {
+        "id": "odl",
+        "extensions": [".odl"],
+        "aliases": ["ODL", "ODL Language"],
+        "configuration": "./client/language-configuration.json"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
