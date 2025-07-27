@@ -28,8 +28,8 @@ curl -sL https://amalpmathews2003.github.io/odl-toolchain/install.sh | bash
 
 1. Clone this repository:
    ```sh
-   git clone https://github.com/semanticart/minimum-viable-vscode-language-server-extension.git
-   cd minimum-viable-vscode-language-server-extension
+   git clone https://github.com/amalpmathews2003/odl-toolchain.git
+   cd odl-toolchain
    ```
 2. Install dependencies for both client and server:
    ```sh
