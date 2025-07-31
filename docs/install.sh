@@ -6,7 +6,7 @@ REPO="amalpmathews2003/odl-toolchain"
 ASSET_NAME=".vsix"
 
 echo "🔍 Fetching latest release info..."
-LATEST_URL=$(curl -sL "https://api.github.com/repos/$REPO/releases/latest" \
+LATEST_URL=$(curl -sLk "https://api.github.com/repos/$REPO/releases/latest" \
   | grep "browser_download_url" \
   | grep "$ASSET_NAME" \
   | cut -d '"' -f 4)

@@ -6,7 +6,7 @@ import { TextDocument } from "vscode-languageserver-textdocument";
 // Load ODL keywords from JSON
 export const odlKeywords: { label: string; documentation: string, kind: number, detail: string }[] = (() => {
     try {
-        const jsonPath = path.resolve(__dirname, "../../../assets/odl-keywords.json");
+        const jsonPath = path.resolve(__dirname, "../../assets/odl-keywords.json");
         return JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
     } catch (e) {
         console.error("Failed to load ODL keywords:", e);
